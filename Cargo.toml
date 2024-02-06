@@ -1,0 +1,19 @@
+[package]
+name = "ImageGuy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+uuid = { version = "1.4", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+dotenv = "0.15"
+tower-http = { version = "0.4.4", features = ["cors"] }
+image = "0.24.8"
+base64 = "0.21.7"
+
