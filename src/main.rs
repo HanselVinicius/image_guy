@@ -16,7 +16,7 @@ async fn main() -> Result<(),Box<dyn std::error::Error>>{
     let app = Router::new()
         .route("/v1/image",post(post_image_handler::post_image) )
         .route("/v1/image:{id}",get(get_image_handler::get_image_handler));
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:8080").await.unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:8080").await.unwrap();
     axum::serve(listener,app).await.unwrap();
     Ok(())
 }
